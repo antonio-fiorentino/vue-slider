@@ -16,6 +16,7 @@ var app = new Vue({
    prev: function() {
        this.imgListIDX -= 1;
    },
+   // Se  l'array è uguale a 4 ricomincia, uguale quando è a -1
    startOverOne: function{
      if (this.imgList[4]) {
        return this.imgListIDX = 0;
