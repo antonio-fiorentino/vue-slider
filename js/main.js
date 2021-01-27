@@ -15,8 +15,15 @@ var app = new Vue({
    },
    prev: function() {
        this.imgListIDX -= 1;
+   },
+   startOverOne: function{
+     if (this.imgList[4]) {
+       return this.imgListIDX = 0;
+     }
+     if (this.imgList[-1]) {
+       return this.imgListIDX = 4;
+     }
    }
-
  }
 });
 Vue.config.devtools = true
