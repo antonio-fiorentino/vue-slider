@@ -10,10 +10,10 @@ var app = new Vue({
  },
  methods:{
    next: function() {
-       this.peopleIDX += 1;
+       this.imgList += 1;
    },
    prev: function() {
-       this.peopleIDX -= 1;
+       this.imgList -= 1;
    }
 
  }
