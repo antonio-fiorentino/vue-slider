@@ -10,21 +10,18 @@ var app = new Vue({
    ]
  },
  methods:{
-   next: function() {
-       this.imgListIDX += 1;
-   },
    prev: function() {
        this.imgListIDX -= 1;
    },
+   next: function() {
+       if (this.imgListIDX=== 4) {
+         return this.imgListIDX =0
+       }else {
+         this.imgListIDX += 1;
+       }
+   },
    // Se  l'array è uguale a 4 ricomincia, uguale quando è a -1
-   startOverOne: function{
-     if (this.imgList[4]) {
-       return this.imgListIDX = 0;
-     }
-     if (this.imgList[-1]) {
-       return this.imgListIDX = 4;
-     }
-   }
- }
+
+  }
 });
 Vue.config.devtools = true
