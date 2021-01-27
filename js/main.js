@@ -11,7 +11,11 @@ var app = new Vue({
  },
  methods:{
    prev: function() {
+     if (this.imgListIDX=== -1) {
+       return this.imgListIDX =3
+     }else {
        this.imgListIDX -= 1;
+     }
    },
    next: function() {
        if (this.imgListIDX=== 4) {
