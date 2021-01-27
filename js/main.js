@@ -1,6 +1,7 @@
 var app = new Vue({
  el: '#contenitore',
  data:{
+   imgListIDX: 0,
    imgList: [
      'https://images.pexels.com/photos/371633/pexels-photo-371633.jpeg?cs=srgb&dl=clouds-country-daylight-371633.jpg&fm=jpg',
      'https://static.photocdn.pt/images/articles/2017/04/28/iStock-646511634.jpg',
@@ -10,10 +11,10 @@ var app = new Vue({
  },
  methods:{
    next: function() {
-       this.imgList += 1;
+       this.imgListIDX += 1;
    },
    prev: function() {
-       this.imgList -= 1;
+       this.imgListIDX -= 1;
    }
 
  }
