@@ -11,20 +11,18 @@ var app = new Vue({
  },
  methods:{
    prev: function() {
+     this.imgListIDX -= 1;
+
      if (this.imgListIDX=== -1) {
        return this.imgListIDX =3
-     }else {
-       this.imgListIDX -= 1;
      }
    },
    next: function() {
+     this.imgListIDX += 1;
        if (this.imgListIDX=== 4) {
          return this.imgListIDX =0
-       }else {
-         this.imgListIDX += 1;
        }
    },
-   // Se  l'array è uguale a 4 ricomincia, uguale quando è a -1
 
   }
 });
